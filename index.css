@@ -1,0 +1,35 @@
+/*CSS Reset*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+/*NAVBAR*/
+#avatar {
+	width: 50px;
+}
+
+/*INTRODUCTION*/
+#name-intro {
+	color: #55ceb5;
+}
+
+#connect {
+	background-color: #fcfbdb;
+	color: black;
+	font-weight: bold;
+}
+
+/*ABOUT ME*/
+#about {
+	background-color: #f7f7f7;
+}
+
+#about-image {
+	width: 35rem;
+}
