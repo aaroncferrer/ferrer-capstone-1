@@ -36,7 +36,7 @@ body {
 
 #about-image {
 	width: 35rem;
-	animation: fadeInFromTop .5s linear forwards, floating ease 5s infinite;
+	animation: fadeInFromTop .5s linear forwards, floating ease 3.5s infinite;
 }
 
 /*PROJECTS*/
