@@ -9,6 +9,10 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+#header {
+	font-family: Hobo Std;
+}
+
 /*NAVBAR*/
 #avatar {
 	width: 50px;
@@ -19,7 +23,7 @@ body {
 	color: #55ceb5;
 }
 
-#connect {
+#connect , #submit {
 	background-color: #fcfbdb;
 	color: black;
 	font-weight: bold;
@@ -27,9 +31,76 @@ body {
 
 /*ABOUT ME*/
 #about {
-	background-color: #f7f7f7;
+	background-color: #E1E0DE;
 }
 
 #about-image {
 	width: 35rem;
+	animation: fadeInFromTop .5s linear forwards, floating ease 5s infinite;
+}
+
+/*PROJECTS*/
+#proj1 , #proj2 , #proj3 {
+	background-color: #E1E0DE
+}
+
+#button1 , #button2 , #button3 {
+	margin-top: auto;
+	background-color: #255680;
+	color: white;
+}
+
+i {
+	font-size: 1.2rem;
+}
+
+/*FOOTER AND SOCIALS*/
+#footer {
+	background-color: #E1E0DE ;
+}
+
+#socials , #icons {
+	text-decoration: none;
+	font-size: 1.6rem;
+	letter-spacing: 20px;
+	color: #212529;
+}
+
+#back-top {
+	text-decoration: none;
+	font-size: 2.3rem;
+	letter-spacing: 20px;
+	color: #212529;
+	position: absolute;
+	right: 0;
+}
+
+@keyframes fadeInFromTop {
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes floating {
+	0% {
+		transform: translate(0%, 0%) rotate(360deg);
+	}
+	25% {
+		transform: translate(0%, 5%) rotate(360deg);
+	}
+	50% {
+		transform: translate(0%, 0%) rotate(360deg);
+	}
+	75% {
+		transform: translate(0%, 5%) rotate(360deg);
+	}
+	100% {
+		transform: translate(0%, 0%) rotate(360deg);
+	}
 }

@@ -11,6 +11,9 @@
 	    <!-- External CSS -->
 	    <link rel="stylesheet" type="text/css" href="./index.css">
 
+	    <!-- Font Awesome -->
+	    <link rel="stylesheet" type="text/css" href="./css/all.min.css">
+
 	    <!-- Google Fonts -->
 	    <link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +26,7 @@
 
 		<!-- NAVBAR START -->
 
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="top1">
 		  	<div class="container-fluid">
 		  	<img class="img-fluid" src="./images/avatar.png" id="avatar">	
 		    <a class="navbar-brand" href="#">Anthony</a>
@@ -32,16 +35,17 @@
 		    </button>
 		    <div class="collapse navbar-collapse" id="navbarNav">
 		      <ul class="navbar-nav ms-auto">
-		        <li class="nav-item">
-		          <a class="nav-link" href="#">About Me</a>
+		        <li class="nav-item ms-xl-3" id="about-nav">
+		          <a class="nav-link active" href="#aboutnav">About Me</a>
 		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link" href="#">Projects</a>
+		        <li class="nav-item ms-xl-3" id="proj-nav">
+		          <a class="nav-link active" href="#project-section">Projects</a>
 		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link" href="#">Contacts</a>
+		        <li class="nav-item ms-xl-3" id="soc-nav">
+		          <a class="nav-link active" href="#footer">Socials</a>
 		        </li>
 		      </ul>
+		      <div class="animation start-home"></div>
 		    </div>
 		  </div>
 		</nav>
@@ -50,13 +54,55 @@
 
 		<!-- INTRO SECTION START -->
 
-		<div class="bg-dark text-light p-5 p-lg-0 pt-xl-5 text-center text-sm-start mt-5">
+		<div class="bg-dark text-light p-5 p-lg-0 pt-xl-5 text-center text-sm-start mt-5" id="top2">
 		        <div class="container">
 		            <div class="d-sm-flex align-items-center justify-content-between">
 		                <div class="me-lg-5">
 		                    <h1>You found me! Hi, I'm <span id="name-intro"> Anthony</span>!</h1>
 		                    <h5 class="my-4">I'm a frontend web developer student who does graphic design on the side. Scroll away to get to know me - I just might be the nerd you're looking for. </h5>
-		                    <a href="#" class="btn" id="connect" >Let's connect!</a>
+		                   
+		 	<!-- MODAL CONTACT FORM -->
+		 	<button type="button" class="btn" id="connect" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Let's connect!</button>
+
+		 	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		 	  <div class="modal-dialog">
+		 	    <div class="modal-content bg-dark">
+		 	      <div class="modal-header">
+		 	        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+		 	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		 	      </div>
+		 	      <div class="modal-body">
+		 	        <form>
+
+		 	          <div class="mb-3">
+		 	            <label for="form-name" class="col-form-label">Name:</label>
+		 	            <input type="text" class="form-control" id="form-name">
+		 	          </div>
+
+		 	          <div class="mb-3">
+		 	            <label for="email" class="col-form-label">Email:</label>
+		 	            <input type="email" class="form-control" id="form-email">
+		 	          </div>
+
+		 	          <div class="mb-3">
+		 	            <label for="form-number" class="col-form-label">Contact Number:</label>
+		 	            <input type="text" class="form-control" id="form-number">
+		 	          </div>
+
+		 	          <div class="mb-3">
+		 	            <label for="message-text" class="col-form-label">Notes:</label>
+		 	            <textarea class="form-control" id="message-text"></textarea>
+		 	          </div>
+		 	        </form>
+
+		 	      </div>
+		 	      <div class="modal-footer">
+		 	        <button type="button" class="btn" id="submit">Submit</button>
+		 	      </div>
+		 	    </div>
+		 	  </div>
+		 	</div>
+
 		                </div>
 		                <img src="./images/image1.png" class="img-fluid w-50 d-none d-lg-block">
 		            </div>
@@ -69,33 +115,38 @@
 
 		<div class="p-5" id="about">
 
-	        <h1 class="text-dark text-center p-2 fw-bold">ABOUT ME</h1>
+	        <h1 class="text-dark text-center p-2" id="header">ABOUT ME</h1>
 
 	        <div class="container mt-xl-5">
 	            <div class="d-sm-flex align-items-center justify-content-between">
 	          
-	                <img src="./images/about-image.png" class="img-fluid d-none d-xl-block mx-xl-5" id="about-image">
+	                <img src="./images/about-image2.png" class="img-fluid d-none d-xl-block mx-xl-5" id="about-image">
 
 	                <div class="ms-xl-5">
 	               
-	                    <p class="mb-2">Registered Nutritionist-Dietitian well-versed in account management and administrative work with demonstrated skills in public relations and graphic design. Dynamic, detail-oriented, and a self-driven food enthusiast who makes sure to get the job done.</p>
+	                    <p class="mb-2" id="about-section">Registered Nutritionist-Dietitian well-versed in account management and administrative work with demonstrated skills in public relations and graphic design. Dynamic, detail-oriented, and a self-driven food enthusiast who makes sure to get the job done.</p>
 	                    <p class="border-bottom border-dark">
 	                    	<span class="fw-bold">FUN FACT:</span> Spent a huge chunk of my life in college performing and competing in national dance competitions.
 	                    </p>
 
-	                    <h5 class="fw-bold">Education</h5>
+	                    <i class="fa-solid fa-graduation-cap"></i>
+	                    <h5 class="fw-bold d-inline-block">EDUCATION</h5>
 	                    <ul class="list-inline">
 	                    	<li class="my-2">2022 Zuitt Coding Bootcamp</li>
-	                    	<li class="my-2">2015-2020 University of the Philippines Los Baños</li>
+	                    	<li class="my-2">2015-2020 University of the Philippines Los Baños - BS Nutrition</li>
 	                    	<li class="my-2">2012-2015 Santa Rosa Science & Technology Highschool</li>
 	                    </ul>
-	                    <h5 class="fw-bold">Work Experience</h5>
+
+	                    <i class="fa-solid fa-briefcase"></i>
+	                    <h5 class="fw-bold d-inline-block">WORK EXPERIENCE</h5>
 	                    <ul class="list-inline">
 	                    	<li class="my-2">Feb 2021-Present | Virtual Assistant & Social Media Manager</li>
 	                    	<li class="my-2">Feb 2019- March 2022 | Graphic Designer</li>
 	                    	<li class="my-2">Jan-March 2022 | Lead Generation Specialist</li>
 	                    </ul>
-	                    <h5 class="fw-bold">Skills</h4>
+
+	                    <i class="fa-solid fa-gear"></i>
+	                    <h5 class="fw-bold d-inline-block">SKILLS</h4>
 	                    <div class="row">		
 	              		<ul class="list-inline col-2">
 	              			<li class="my-2">HTML</li>
@@ -120,21 +171,77 @@
 
 		<!-- PROJECTS SECTION START -->
 
-		<div class="bg-dark text-light p-5 p-lg-0 pt-xl-5 text-center text-sm-start">
-		        <div class="container">
-		            <div class="d-sm-flex align-items-center justify-content-between">
-		                <div class="me-lg-5">
-		                    <h1>You found me! Hi, I'm <span id="name-intro"> Anthony</span>!</h1>
-		                    <h5 class="my-4">I'm a frontend web developer student who does graphic design on the side. Scroll away to get to know me - I just might be the nerd you're looking for. </h5>
-		                    <a href="#" class="btn" id="connect" >Let's connect!</a>
-		                </div>
-		                <img src="./images/image1.png" class="img-fluid w-50 d-none d-md-block">
-		            </div>
-		        </div>
-		    </div>
+		<div class="bg-dark" id="project-section">
+		
+		<h1 class="text-light text-center pt-5" id="header">PROJECTS</h1>
 
+		<div class="d-lg-flex justify-content-center p-5">
+			
+			<!-- PROJECT 1 Start -->
+
+			<div class="card col-xl-3 mb-5 mb-xl-0" id="proj1">
+			  <img src="./images/proj1.png" class="card-img-top" alt="html image">
+			  <div class="card-body d-flex flex-column">
+			    <h5 class="card-title text-center fw-bold mb-3">VERVE 6 Teaser</h5>
+			    <p class="card-text">This is the teaser photo for the 6th installment of UPLB Street Jazz Dance Comapany's Dance concert entitled VERVE.</p>
+			    <a href="https://drive.google.com/file/d/1EAnli_OjIahk1WQNI1Cy1SPFoWn74ld8/view?usp=sharing" target=”_blank” class="btn" id="button1">View</a>
+			  </div>
+			</div>
+
+			<!-- PROJECT 1 End -->
+
+			<!-- PROJECT 2 Start -->
+
+			<div class="card col-xl-3 mb-5 mb-xl-0 mx-xl-5" id="proj2">
+			  <img src="./images/proj2.png" class="card-img-top" alt="bootstrap image">
+			  <div class="card-body d-flex flex-column">
+			    <h5 class="card-title text-center fw-bold mb-3">Bootcamp Capstone 1</h5>
+			    <p class="card-text">A static webpage showcasing our portfolio as output for our first capstone in zuitt bootcamp.</p>
+			    <a href="#" class="btn" id="button2">View</a>
+			  </div>
+			</div>
+
+			<!-- PROJECT 2 End -->
+
+			<!-- PROJECT 3 Start -->
+
+			<div class="card col-xl-3 mb-5 mb-xl-0" id="proj3">
+			  <img src="./images/proj3.png" class="card-img-top" alt="node js server image">
+			  <div class="card-body d-flex flex-column">
+			    <h5 class="card-title text-center fw-bold mb-3">Gibki Teaser</h5>
+			    <p class="card-text">Teaser publicity material for Gibki's brand launch on social media. Gibki is a digital transformation agency that seeks to set a new standard for technology in the country.</p>
+			    <a href="https://drive.google.com/file/d/1bAW3X8C5ANEHogQ6kglPqzInUrSWyhF9/view?usp=sharing" target=”_blank” class="btn" id="button3">View</a>
+			  </div>
+			</div>
+
+			<!-- PROJECT 3 End -->
+
+		</div>
+		</div>
+		      
 		<!-- PROJECTS SECTION END -->
 
+		<!-- SOCIALS AND FOOTER -->
+
+		<div class="text-dark text-center py-xl-4" id="footer">
+            <!-- <h1 class="text-dark fw-bold">SOCIALS</h1> -->
+
+         	<a href="https://www.facebook.com/" target=”_blank” id="icons">
+            <i class="fa-brands fa-facebook" id="socials"></i></a>
+           
+            <a href="https://www.twitter.com/" target=”_blank” id="icons">
+            <i class="fa-brands fa-twitter" id="socials"></i></a>
+            
+            <a href="https://www.instagram.com/" target=”_blank” id="icons">
+            <i class="fa-brands fa-instagram" id="socials"></i></a>
+            
+            <a href="https://www.linkedin.com/" target=”_blank” id="icons">
+            <i class="fa-brands fa-linkedin" id="socials"></i></a>     
+
+            <a href="#" id="icons">
+            <i class="fa-solid fa-circle-chevron-up"id="back-top"></i></a>
+
+        </div>
 
 		<!-- Script -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
